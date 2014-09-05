@@ -1,0 +1,29 @@
+{
+  "name": "javascript-cebu-presentations",
+  "version": "0.0.1",
+  "authors": [
+    "Seth Malaki <seth.malaki@gmail.com>"
+  ],
+  "description": "Javascript Cebu Presentation slides built with deck.js",
+  "main": "dist/app.min.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "deck.js",
+    "presentations"
+  ],
+  "license": "ISC",
+  "homepage": "http://github.com/electricjesus/javascript-cebu-presentations",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "deck.js": "~1.1.0",
+    "requirejs": "~2.1.14"
+  }
+}
