@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     },
 
     jshint:  {
-  	  beforeconcat: ['js/**/*.js'],
+  	  beforeconcat: ['js/app/*.js'],
     	options: {
     		"lastsemic" : true,
     		"globals": { jQuery: true, console: true, Handlebars: true, "_" : true }
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('package', ['bowercopy','sass:dist','jshint:beforeconcat','concat','uglify']);
   grunt.registerTask('build',   ['bowercopy','sass:dev','jshint:beforeconcat','concat','uglify']);
-  grunt.registerTask('default', ['build','server','watch']);
+  grunt.registerTask('default', ['build','connect:server','watch']);
 
 }
 
