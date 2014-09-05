@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     },
 
     jshint:  {
-  	  beforeconcat: ['scripts/**/*.js'],
+  	  beforeconcat: ['js/**/*.js'],
     	options: {
     		"lastsemic" : true,
     		"globals": { jQuery: true, console: true, Handlebars: true, "_" : true }
@@ -44,8 +44,8 @@ module.exports = function(grunt) {
       }, 
       dist: {
         src: [
-          'scripts/vendor/**/*.js',
-          'scripts/app/**/*.js'
+          'js/vendor/**/*.js',
+          'js/app/**/*.js'
         ],
         dest: 'dist/app.js'
       },   
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       javascripts: {
-        files: 'scripts/**/*.js',
+        files: 'js/**/*.js',
         tasks: ['jshint:beforeconcat','concat','uglify'],
         options: {
           livereload: true
