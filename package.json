@@ -2,7 +2,7 @@
   "name": "javascript-cebu-presentations",
   "version": "0.0.1",
   "description": "javascript cebu presentations using deck.js, connect",
-  "main": "app.js",
+  "main": "dist/app.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
