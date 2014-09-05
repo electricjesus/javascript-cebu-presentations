@@ -4,6 +4,6 @@ Thumbs.db
 /node_modules/*
 /dist/*
 !/dist/.gitkeep
-/css/app/app.css
+/css/app/app.css*
 /css/vendor/*
 /js/vendor/*
