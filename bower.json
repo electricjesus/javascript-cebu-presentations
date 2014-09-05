@@ -23,7 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "deck.js": "~1.1.0",
-    "requirejs": "~2.1.14"
+    "reveal.js": "~2.6.2"
   }
 }
