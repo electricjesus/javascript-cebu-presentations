@@ -1,6 +1,17 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    bowercopy : {      
+      revealjs: {
+        files : {
+        'css/vendor/reveal.js/reveal.css' : 'reveal.js/css/reveal.css',
+        'css/vendor/reveal.js/theme' : 'reveal.js/css/theme',
+        'css/vendor/reveal.js/print' : 'reveal.js/css/print',
+        'js/vendor/reveal.js/reveal.js' : 'reveal.js/js/reveal.js'         
+        }  
+      }      
+    },
     
     connect: {
       server: {
@@ -107,8 +118,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('package', ['sass:dist','jshint:beforeconcat','concat','uglify']);
-  grunt.registerTask('build',   ['sass:dev','jshint:beforeconcat','concat','uglify']);
+  grunt.registerTask('package', ['bowercopy','sass:dist','jshint:beforeconcat','concat','uglify']);
+  grunt.registerTask('build',   ['bowercopy','sass:dev','jshint:beforeconcat','concat','uglify']);
   grunt.registerTask('default', ['build','server','watch']);
 
 }
+
